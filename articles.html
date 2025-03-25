@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles - Beacon Web</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      body {
+        background-color: #222;
+        color: white;
+        text-align: center;
+        overflow-x: hidden;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #111;
+        padding: 10px 20px;
+      }
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #bf0000;
+      }
+      .title {
+        font-size: 28px;
+      }
+      .buttons button {
+        margin-left: 10px;
+        padding: 8px 15px;
+        background-color: #bf0000;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .buttons button:hover {
+        background-color: #990000;
+      }
+      .nav {
+        display: flex;
+        justify-content: center;
+        background-color: #333;
+        padding: 10px 0;
+      }
+      .nav a {
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+      .nav a:hover {
+        background-color: #444;
+      }
+      .articles-container {
+        margin: 20px auto;
+        width: 80%;
+      }
+      .article-block {
+        background-color: #333;
+        padding: 20px;
+        margin: 10px 0;
+        cursor: pointer;
+        border-left: 5px solid #bf0000;
+        text-align: left;
+        transition: 0.3s;
+      }
+      .article-block:hover {
+        background-color: #444;
+      }
+      h2 {
+        color: #ff4444;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        position: fixed;
+        top: 0;
+        right: -400px;
+        width: 400px;
+        height: 100%;
+        background-color: #111;
+        padding: 20px;
+        overflow-y: auto;
+        transition: 0.3s;
+        box-shadow: -3px 0px 5px rgba(0, 0, 0, 0.5);
+      }
+      .sidebar h2 {
+        margin-bottom: 15px;
+      }
+      .sidebar p {
+        text-align: left;
+        line-height: 1.5;
+      }
+      .close-btn {
+        background-color: #bf0000;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+      .close-btn:hover {
+        background-color: #990000;
+      }
+      @media (max-width: 768px) {
+        .sidebar {
+          width: 100%;
+          right: -100%;
+        }
+      }
+      .footer {
+        background-color: black;
+        padding: 20px;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div class="header">
+      <div class="logo">BeaconLogo</div>
+      <div class="title">Beacon Web</div>
+      <div class="buttons">
+        <button onclick="openModal()">Login</button>
+        <button onclick="openModal()">Signup</button>
+        <button onclick="openModal()">Premium</button>
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="nav">
+      <a href="home.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="team.html">Team</a>
+      <a href="articles.html">Articles</a>
+      <a href="help.html">Help</a>
+    </div>
+
+    <!-- ARTICLES LIST -->
+    <div class="articles-container">
+      <div class="article-block" onclick="openSidebar(0)">
+        <h2>Article 1</h2>
+      </div>
+      <div class="article-block" onclick="openSidebar(1)">
+        <h2>Article 2</h2>
+      </div>
+      <div class="article-block" onclick="openSidebar(2)">
+        <h2>Article 3</h2>
+      </div>
+      <div class="article-block" onclick="openSidebar(3)">
+        <h2>Article 4</h2>
+      </div>
+      <div class="article-block" onclick="openSidebar(4)">
+        <h2>Article 5</h2>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar" id="sidebar">
+      <button class="close-btn" onclick="closeSidebar()">Close</button>
+      <h2 id="article-title">Article Title</h2>
+      <p id="article-content">Article content will appear here.</p>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>Contact: beacon@example.com | Address: 123 Web Street, Code City</p>
+    </div>
+
+    <script>
+      // Articles Data
+      const articles = [
+        {
+          title: "Article 1",
+          content:
+            "This is the full content of Article 1. Write your amazing thoughts here.",
+        },
+        {
+          title: "Article 2",
+          content:
+            "This is the full content of Article 2. More details, insights, or theories go here.",
+        },
+        {
+          title: "Article 3",
+          content:
+            "This is the full content of Article 3. Expand on your topic, make it detailed!",
+        },
+        {
+          title: "Article 4",
+          content:
+            "This is the full content of Article 4. Keep your readers engaged with deep content.",
+        },
+        {
+          title: "Article 5",
+          content:
+            "This is the full content of Article 5. Finish strong with impactful thoughts.",
+        },
+      ];
+
+      function openSidebar(index) {
+        document.getElementById("article-title").textContent =
+          articles[index].title;
+        document.getElementById("article-content").textContent =
+          articles[index].content;
+        document.getElementById("sidebar").style.right = "0";
+      }
+
+      function closeSidebar() {
+        document.getElementById("sidebar").style.right = "-400px";
+      }
+    </script>
+  </body>
+</html>

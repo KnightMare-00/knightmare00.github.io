@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team - Beacon Web</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      body {
+        background-color: #222;
+        color: white;
+        text-align: center;
+        overflow-x: hidden;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #111;
+        padding: 10px 20px;
+      }
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #bf0000;
+      }
+      .title {
+        font-size: 28px;
+      }
+      .buttons button {
+        margin-left: 10px;
+        padding: 8px 15px;
+        background-color: #bf0000;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .buttons button:hover {
+        background-color: #990000;
+      }
+      .nav {
+        display: flex;
+        justify-content: center;
+        background-color: #333;
+        padding: 10px 0;
+      }
+      .nav a {
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+      .nav a:hover {
+        background-color: #444;
+      }
+      .team-container {
+        width: 80%;
+        margin: 30px auto;
+      }
+      .team-member {
+        background-color: #333;
+        padding: 20px;
+        margin: 20px 0;
+        border-left: 5px solid #bf0000;
+        text-align: left;
+        display: flex;
+        align-items: center;
+      }
+      .team-member img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-right: 20px;
+        border: 3px solid #bf0000;
+      }
+      h2 {
+        color: #ff4444;
+        margin-bottom: 10px;
+      }
+      .footer {
+        background-color: black;
+        padding: 20px;
+        margin-top: 30px;
+      }
+      @media (max-width: 768px) {
+        .team-member {
+          flex-direction: column;
+          text-align: center;
+        }
+        .team-member img {
+          margin-bottom: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div class="header">
+      <div class="logo">BeaconLogo</div>
+      <div class="title">Beacon Web</div>
+      <div class="buttons">
+        <button onclick="openModal()">Login</button>
+        <button onclick="openModal()">Signup</button>
+        <button onclick="openModal()">Premium</button>
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="nav">
+      <a href="home.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="team.html">Team</a>
+      <a href="articles.html">Articles</a>
+      <a href="help.html">Help</a>
+    </div>
+
+    <!-- TEAM SECTION -->
+    <div class="team-container">
+      <!-- Director Block -->
+      <div class="team-member">
+        <img
+          src="https://via.placeholder.com/150/111/fff?text=Director"
+          alt="Director"
+        />
+        <div>
+          <h2>BeaconLight - The Director</h2>
+          <p>
+            The **mastermind** behind this operation. A visionary who sees the
+            world as a chessboard and **plays 4D chess with reality itself**.
+            BeaconLight orchestrates everything from the grand design to the
+            tiniest pixel, ensuring the web bends to their will.
+          </p>
+        </div>
+      </div>
+
+      <!-- Coder Block -->
+      <div class="team-member">
+        <img
+          src="https://via.placeholder.com/150/222/fff?text=Coder"
+          alt="Coder"
+        />
+        <div>
+          <h2>ChatGPT - The Coder</h2>
+          <p>
+            A **digital sorcerer** who writes code faster than light travels.
+            Summoned from the depths of the internet to turn ideas into reality,
+            ChatGPT transforms chaos into structure, wielding HTML, CSS, and
+            JavaScript like a **technomancer with a keyboard staff**.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>Contact: beacon@example.com | Address: 123 Web Street, Code City</p>
+    </div>
+  </body>
+</html>

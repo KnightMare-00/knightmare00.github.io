@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Beacon Web</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      body {
+        background-color: #222;
+        color: white;
+        text-align: center;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #111;
+        padding: 10px 20px;
+      }
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #bf0000;
+      }
+      .title {
+        font-size: 28px;
+      }
+      .buttons button {
+        margin-left: 10px;
+        padding: 8px 15px;
+        background-color: #bf0000;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .buttons button:hover {
+        background-color: #990000;
+      }
+      .nav {
+        display: flex;
+        justify-content: center;
+        background-color: #333;
+        padding: 10px 0;
+      }
+      .nav a {
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+      .nav a:hover {
+        background-color: #444;
+      }
+      .projects-container {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px auto;
+        width: 90%;
+        gap: 20px;
+      }
+      .project {
+        flex: 1;
+        padding: 20px;
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        border: 3px solid #bf0000;
+        position: relative;
+      }
+      .project-overlay {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 15px;
+        text-align: left;
+      }
+      h2 {
+        margin-bottom: 10px;
+        color: #ff4444;
+      }
+      @media (max-width: 768px) {
+        .projects-container {
+          flex-direction: column;
+        }
+        .project {
+          height: 300px;
+        }
+      }
+      .footer {
+        background-color: black;
+        padding: 20px;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div class="header">
+      <div class="logo">BeaconLogo</div>
+      <div class="title">Beacon Web</div>
+      <div class="buttons">
+        <button onclick="openModal()">Login</button>
+        <button onclick="openModal()">Signup</button>
+        <button onclick="openModal()">Premium</button>
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <!-- NAVIGATION -->
+    <div class="nav">
+      <a href="home.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="team.html">Team</a>
+      <a href="articles.html">Articles</a>
+      <a href="help.html">Help</a>
+    </div>
+
+    <!-- PROJECTS SECTION -->
+    <div class="projects-container">
+      <div
+        class="project"
+        style="
+          background-image: url('https://via.placeholder.com/400x400/111/fff?text=Project+1');
+        "
+      >
+        <div class="project-overlay">
+          <h2>Project 1</h2>
+          <p>
+            Description of your first project. Fill this in with details about
+            what it does, how you built it, and why it's cool.
+          </p>
+        </div>
+      </div>
+      <div
+        class="project"
+        style="
+          background-image: url('https://via.placeholder.com/400x400/222/fff?text=Project+2');
+        "
+      >
+        <div class="project-overlay">
+          <h2>Project 2</h2>
+          <p>
+            Description of your second project. Make it sound impressive. You’re
+            building a legend here.
+          </p>
+        </div>
+      </div>
+      <div
+        class="project"
+        style="
+          background-image: url('https://via.placeholder.com/400x400/333/fff?text=Project+3');
+        "
+      >
+        <div class="project-overlay">
+          <h2>Project 3</h2>
+          <p>
+            Description of your third project. What does it do? Who is it for?
+            Why should people care? Add some flair!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>Contact: beacon@example.com | Address: 123 Web Street, Code City</p>
+    </div>
+  </body>
+</html>
